@@ -30,9 +30,8 @@
     .skip-link:focus { top: 12px; }
     .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(80, 199, 215, .25); background: rgba(0, 43, 54, .97); backdrop-filter: blur(14px); }
     .header-inner { width: min(1180px, calc(100% - 48px)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--cyan); text-decoration: none; font-size: 20px; font-weight: 850; letter-spacing: .13em; line-height: 1; }
-    .brand-mark { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid var(--cyan); border-radius: 50%; color: var(--cyan); font-size: 16px; font-weight: 800; }
-    .brand small { display: block; margin-top: 5px; color: var(--cream); font-size: 10px; font-weight: 550; letter-spacing: .17em; }
+    .brand { display: inline-flex; width: 180px; height: 54px; align-items: center; justify-content: center; overflow: hidden; text-decoration: none; }
+    .brand-logo { display: block; width: 180px; height: 54px; flex: none; filter: brightness(0) invert(1); object-fit: cover; }
     .main-nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 36px); }
     .main-nav a { color: #e4f0f2; font-size: 12px; font-weight: 600; text-decoration: none; }
     .main-nav a:hover, .main-nav a:focus-visible, .text-link:hover { color: var(--cyan); }
@@ -117,13 +116,13 @@
     .text-link span { margin-left: 3px; }
     .site-footer { background: #001e26; color: #d4e4e7; }
     .footer-inner { width: min(1180px, calc(100% - 48px)); margin: auto; padding: 22px 0; text-align: center; }
-    .footer-inner p { margin: 0; font-size: 11px; line-height: 1.6; letter-spacing: .04em; }
+    .footer-inner p { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0; font-size: 11px; line-height: 1.6; letter-spacing: .04em; }
+    .footer-logo { position: relative; display: block; width: 54px; height: 54px; flex: none; overflow: hidden; }
+    .footer-logo .brand-logo { position: relative; left: -63px; max-width: none; }
     @media (max-width: 760px) {
       .header-inner { width: min(100% - 32px, 600px); min-height: 68px; }
       .main-nav { gap: 14px; }
       .main-nav a { font-size: 10px; white-space: nowrap; }
-      .brand { gap: 8px; font-size: 16px; }
-      .brand small { font-size: 8px; letter-spacing: .08em; white-space: nowrap; }
       .header-cta { display: none; }
       .hero { min-height: 590px; }
       .hero-inner, .hero-index { width: min(100% - 40px, 600px); }
@@ -146,8 +145,6 @@
       .footer-inner { width: min(100% - 36px, 600px); }
     }
     @media (max-width: 420px) {
-      .brand { font-size: 10px; }
-      .brand-mark { width: 34px; height: 34px; }
       .main-nav { gap: 11px; }
       .main-nav a { font-size: 9px; }
       .hero-actions .button { width: 100%; }
@@ -165,8 +162,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#" aria-label="SOUL on life, início">
-        <span class="brand-mark" aria-hidden="true">S</span>
-        <span>SOUL<small>on life · catálogo de espaços</small></span>
+        <img class="brand-logo" src="assets/soul-logo.png" alt="">
       </a>
       <nav class="main-nav" aria-label="Navegação principal">
         <a href="#selecionados">Destaques</a>
@@ -216,7 +212,7 @@
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p><strong>SOUL on life</strong> <span aria-hidden="true">·</span> Agência Online</p>
+      <p><span class="footer-logo"><img class="brand-logo" src="assets/soul-logo.png" alt="SOUL on life"></span><span aria-hidden="true">·</span> Agência Online</p>
     </div>
   </footer>
 </body>
