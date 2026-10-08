@@ -132,11 +132,8 @@
     .about-copy p { margin: 0; color: #e4f0f2; font-size: 13px; line-height: 1.85; }
     .about-copy p + p { margin-top: 13px; }
     .site-footer { background: #001e26; color: #d4e4e7; }
-    .footer-inner { width: min(1180px, calc(100% - 48px)); margin: auto; padding: 27px 0; display: flex; justify-content: space-between; gap: 20px; align-items: center; }
-    .footer-inner p { margin: 0; font-size: 10px; line-height: 1.6; }
-    .footer-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .footer-actions .button { min-height: 39px; padding: 0 13px; font-size: 10px; }
-    .footer-link { color: var(--cream); font-size: 10px; text-decoration-color: rgba(255,245,209,.4); }
+    .footer-inner { width: min(1180px, calc(100% - 48px)); margin: auto; padding: 22px 0; text-align: center; }
+    .footer-inner p { margin: 0; font-size: 11px; line-height: 1.6; letter-spacing: .04em; }
     @media (max-width: 760px) {
       .header-inner { width: min(100% - 32px, 600px); min-height: 68px; }
       .main-nav { gap: 14px; }
@@ -167,7 +164,7 @@
       .filters input { grid-column: 1 / -1; }
       .venue-grid { grid-template-columns: 1fr; }
       .about-inner { width: min(100% - 36px, 600px); padding: 66px 0; grid-template-columns: 1fr; gap: 22px; }
-      .footer-inner { width: min(100% - 36px, 600px); align-items: flex-start; flex-direction: column; }
+      .footer-inner { width: min(100% - 36px, 600px); }
     }
     @media (max-width: 420px) {
       .brand { font-size: 10px; }
@@ -267,11 +264,7 @@
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p><strong>SOUL on life</strong><br>Agência online de eventos <span aria-hidden="true">·</span> Santa Catarina</p>
-      <div class="footer-actions">
-        <a class="button button-outline" href="catalogo_espacos_eventos.pdf" download>Baixar catálogo em PDF</a>
-        <a class="footer-link" href="#conteudo">Voltar ao topo ↑</a>
-      </div>
+      <p><strong>SOUL on life</strong> <span aria-hidden="true">·</span> Agência Online</p>
     </div>
   </footer>
   <script>
