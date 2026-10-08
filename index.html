@@ -30,8 +30,8 @@
     .skip-link:focus { top: 12px; }
     .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(80, 199, 215, .25); background: rgba(0, 43, 54, .97); backdrop-filter: blur(14px); }
     .header-inner { width: min(1180px, calc(100% - 48px)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; width: 180px; height: 54px; align-items: center; justify-content: center; overflow: hidden; text-decoration: none; }
-    .brand-logo { display: block; width: 180px; height: 54px; flex: none; filter: brightness(0) invert(1); object-fit: cover; }
+    .brand { display: inline-flex; width: 120px; height: 44px; align-items: center; justify-content: center; overflow: hidden; text-decoration: none; }
+    .brand-logo { display: block; width: 120px; height: 44px; flex: none; filter: brightness(0) invert(1); object-fit: cover; }
     .main-nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 36px); }
     .main-nav a { color: #e4f0f2; font-size: 12px; font-weight: 600; text-decoration: none; }
     .main-nav a:hover, .main-nav a:focus-visible, .text-link:hover { color: var(--cyan); }
@@ -45,8 +45,6 @@
     .hero-inner { position: relative; z-index: 1; width: min(1180px, calc(100% - 48px)); margin: auto; padding: 100px 0 112px; }
     .eyebrow { display: block; color: var(--ink-soft); font-size: 10px; font-weight: 750; letter-spacing: .15em; line-height: 1.5; text-transform: uppercase; }
     .hero .eyebrow { color: var(--cyan); }
-    .brand-lockup { margin: 0 0 24px; color: var(--cyan); font-size: 17px; font-weight: 850; letter-spacing: .2em; }
-    .brand-lockup span { margin-left: 8px; color: var(--cream); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: lowercase; }
     h1, h2, h3, p { margin-top: 0; }
     h1, h2, h3 { text-transform: uppercase; }
     h1 { max-width: 900px; margin: 22px 0; font: 800 clamp(32px, 5vw, 58px)/1.08 var(--sans); letter-spacing: .025em; }
@@ -115,10 +113,9 @@
     .text-link:hover { background: var(--ink); color: white; }
     .text-link span { margin-left: 3px; }
     .site-footer { background: #001e26; color: #d4e4e7; }
-    .footer-inner { width: min(1180px, calc(100% - 48px)); margin: auto; padding: 22px 0; text-align: center; }
-    .footer-inner p { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0; font-size: 11px; line-height: 1.6; letter-spacing: .04em; }
-    .footer-logo { position: relative; display: block; width: 54px; height: 54px; flex: none; overflow: hidden; }
-    .footer-logo .brand-logo { position: relative; left: -63px; max-width: none; }
+    .footer-inner { width: min(1180px, calc(100% - 48px)); margin: auto; padding: 12px 0; text-align: center; }
+    .footer-logo { display: block; width: 120px; height: 44px; margin: auto; overflow: hidden; }
+    .footer-logo .brand-logo { max-width: none; }
     @media (max-width: 760px) {
       .header-inner { width: min(100% - 32px, 600px); min-height: 68px; }
       .main-nav { gap: 14px; }
@@ -174,7 +171,6 @@
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
-        <div class="brand-lockup" aria-label="SOUL on life">SOUL <span>on life</span></div>
         <span class="eyebrow">CATÁLOGO DE LOCAIS <span aria-hidden="true">·</span> AEBAVE</span>
         <h1 id="hero-title">Catálogo de possíveis locais para eventos da <em>AEBAVE.</em></h1>
         <div class="hero-actions">
@@ -212,7 +208,7 @@
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p><span class="footer-logo"><img class="brand-logo" src="assets/soul-logo.png" alt="SOUL on life"></span><span aria-hidden="true">·</span> Agência Online</p>
+      <div class="footer-logo"><img class="brand-logo" src="assets/soul-logo.png" alt="SOUL on life"></div>
     </div>
   </footer>
 </body>
